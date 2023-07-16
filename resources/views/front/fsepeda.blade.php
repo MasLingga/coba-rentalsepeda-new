@@ -1,32 +1,11 @@
 @extends('layouts/layouts')
 
 @section('konten')
-<div class="container-fluid pt-5">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span
-        class="bg-secondary pr-3">Kategori Sepeda</span></h2>
-    @foreach ($res_kategori_sepeda as $item)   
-    <div class="row px-xl-5 pb-3">
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 200px; height: 200px;">
-                        <img class="img-fluid" src="images/{{$item->nama_kategori}}.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>{{$item->nama_kategori}}</h6>
-                        <small class="text-body">50 sepeda</small>                        
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    @endforeach
-</div>
 
 <div class="container-fluid pt-5 pb-3">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Sepeda</span></h2>
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Buku</span></h2>
     <div class="row px-xl-5">
-        @foreach ($res_sepeda as $item)
+        @foreach ($res_buku as $item)
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
@@ -43,13 +22,13 @@
                         </div>
                     </div>
                     <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">{{$item->nama_sepeda}}</a>
+                        <a class="h6 text-decoration-none text-truncate" href="">{{$item->judul_buku}}</a>
                         <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>{{$item->tahun_produksi}}</h5>
+                            <h5>{{$item->tahun_terbit}}</h5>
                         </div>
                         <div class="d-flex align-items-center justify-content-center mb-1">
                            
-                            <a class='btn btn-primary' href="{{url('addtocart'.$item->id)}}">add to cart</a>
+                            <a class='btn btn-primary' href="{{url('addtocart'.'?id='.$item->id)}}">add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -58,4 +37,5 @@
         </div>
     </div>
 </div>
+
 @endsection

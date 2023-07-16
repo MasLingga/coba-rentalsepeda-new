@@ -14,7 +14,7 @@
                     </div>
                     <div class="flex-fill pl-3">
                         <h6>{{$item->nama_kategori}}</h6>
-                        <small class="text-body">50 sepeda</small>                        
+                        <small class="text-body">50 buku</small>                        
                     </div>
                 </div>
             </a>

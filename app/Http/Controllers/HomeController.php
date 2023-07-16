@@ -27,20 +27,20 @@ class HomeController extends Controller
         $title = 'home';
         $pages = 'home';
 
-        $res_kategori_buku = DB::select('select * from kategori_buku');
-        $res_buku = DB::select('select * from buku');
-        return view('home',compact('title', 'pages', 'res_kategori_buku','res_buku'))
+        $res_kategori_sepeda = DB::select('select * from kategori_sepeda');
+        $res_sepeda = DB::select('select * from sepeda');
+        return view('home',compact('title', 'pages', 'res_kategori_sepeda','res_sepeda'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
     public function addtocart(Request $request){
 
         $id = $request->id;
-        $res_buku = DB::select('select * from buku');
+        $res_buku = DB::select('select * from sepeda');
 
         \Cart::add(
             [
             'id' => $request->id, // inique row ID
-            'judul_buku' => $res_buku->judul_buku,
+            'nama_sepeda' => $res_sepeda->nama_sepeda,
             'quantity' => 1
             ]
         ); 
