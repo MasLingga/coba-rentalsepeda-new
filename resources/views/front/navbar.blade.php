@@ -17,8 +17,8 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
                         <a href="{{url('home')}}" class="nav-item nav-link active">Home</a>
-                        <a href="{{url('fbuku')}}" class="nav-item nav-link">Sepeda</a>
-                        <a href="{{url('fkategoribuku')}}" class="nav-item nav-link">Kategori Sepeda</a>
+                        <a href="{{url('fsepeda')}}" class="nav-item nav-link">Sepeda</a>
+                        <a href="{{url('fkategorisepeda')}}" class="nav-item nav-link">Kategori Sepeda</a>
                         <a href="{{url('fcontacts')}}" class="nav-item nav-link">Contact</a>
                         <a href="{{url('logout')}}" style="color:aqua"class="nav-item nav-link">Log Out</a>
                     </div>

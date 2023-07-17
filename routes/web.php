@@ -66,7 +66,7 @@ Route::post('/crud', [CrudBuilderController::class, 'index'])->name('crud.index'
 Route::get('/apibuilder', [ApiBuilderController::class, 'index'])->name('apibuilder.index');
 Route::post('/apibuilder', [ApiBuilderController::class, 'index'])->name('apibuilder.index');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home2');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 Route::resource('r1', RecomenderController::class);
@@ -92,6 +92,6 @@ Route::group(['middleware' => ['auth']], function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home2');
-Route::get('/fbuku', [App\Http\Controllers\front\FrontBukuController::class, 'index'])->name('fbuku');
-Route::get('/fkategoribuku', [App\Http\Controllers\front\FrontKategoriBukuController::class, 'index'])->name('fkategoribuku');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/fsepeda', [App\Http\Controllers\front\FrontSepedaController::class, 'index'])->name('fsepeda');
+Route::get('/fkategorisepeda', [App\Http\Controllers\front\FrontKategoriSepedaController::class, 'index'])->name('fkategorisepeda');

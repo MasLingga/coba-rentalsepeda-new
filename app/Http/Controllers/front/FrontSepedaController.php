@@ -21,7 +21,7 @@ class FrontSepedaController extends Controller
     public function index(Request $request)
     {
         $res_sepeda = DB::select('select * from sepeda');
-        return view('front/fbuku',compact('res_sepeda'))
+        return view('front/fsepeda',compact('res_sepeda'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 }

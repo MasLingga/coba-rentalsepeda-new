@@ -30,7 +30,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="images/{{$item->judul_buku}}.jpg" style="width: 100px; height: 350px;" alt="">
+                        <img class="img-fluid w-100" src="images/{{$item->nama_sepeda}}.jpg" style="width: 100px; height: 350px;" alt="">
                         <div class="product-action">
                             <a class="btn btn-outline-dark btn-square" href=""><i
                                     class="fa fa-shopping-cart"></i></a>
